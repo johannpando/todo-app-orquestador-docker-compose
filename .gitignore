@@ -1,0 +1,12 @@
+# Ejemplo de .gitignore en la raíz del proyecto
+# Node modules
+frontend/node_modules/
+
+# Maven target directory
+backend/target/
+
+# IntelliJ IDEA project files
+.idea/
+
+# MacOS files
+.DS_Store

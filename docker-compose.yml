@@ -1,0 +1,24 @@
+services:
+  backend:
+    image: todo-app-springboot
+    build:
+      context: ../todo-app-springboot
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - todo-network
+
+  frontend:
+    image: todo-app-react
+    build:
+      context: ../todo-app-react
+      dockerfile: Dockerfile
+    ports:
+      - "3001:80"
+    networks:
+      - todo-network
+
+networks:
+  todo-network:
+    driver: bridge
